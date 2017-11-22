@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" hgap="10.0" style="-fx-background-color: #051747;" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <Pane prefHeight="400.0" prefWidth="681.0">
+      <children>
+        <Label fx:id="idTitulo" contentDisplay="CENTER" layoutX="272.0" layoutY="21.0" prefHeight="33.0" prefWidth="152.0" text="Control de Colas" textAlignment="CENTER" textFill="#fffbfb" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+          <font>
+            <Font name="Arial Bold" size="18.0" />
+          </font>
+        </Label>
+        <Label id="lblAgregar" fx:id="lblInsertar" layoutX="21.0" layoutY="54.0" prefHeight="33.0" prefWidth="152.0" text="Insertar número en Cola" textFill="#fcf7f7" />
+        <TextField fx:id="txtInsertar" layoutX="21.0" layoutY="87.0" prefHeight="22.9609375" prefWidth="138.0" />
+        <Button fx:id="btnInsertar" layoutX="21.0" layoutY="120.0" mnemonicParsing="false" text="Insertar" />
+        <Label fx:id="lblExtraer" layoutX="279.0" layoutY="60.0" prefHeight="20.9609375" prefWidth="138.00002207031503" text="Extraer número de Cola">
+          <textFill>
+            <Color blue="0.941" green="0.941" red="0.949" fx:id="x1" />
+          </textFill>
+        </Label>
+        <Button fx:id="btnExtraer" layoutX="320.0" layoutY="95.0" mnemonicParsing="false" text="Extraer" />
+        <Label fx:id="lblMostrar" layoutX="290.0" layoutY="212.0" prefHeight="33.0" prefWidth="115.99997792968497" text="Elementos de la Cola" textAlignment="CENTER" textFill="#f2e9e9" textOverrun="ELLIPSIS" />
+        <ListView fx:id="listView" layoutX="118.0" layoutY="258.0" orientation="HORIZONTAL" prefHeight="107.0" prefWidth="459.0" />
+        <Label fx:id="lblSize" layoutX="517.0" layoutY="60.0" prefHeight="20.9609375" prefWidth="164.00002207031503" text="Mostrar Tamaño de la Cola" textFill="WHITE" />
+        <Button fx:id="btnMostrarSize" layoutX="515.0" layoutY="120.0" mnemonicParsing="false" text="Mostrar" />
+        <Label id="lblSize" fx:id="lblTextoSize" layoutX="517.0" layoutY="94.0" prefHeight="20.9609375" prefWidth="63.000022070315026" text="Tamaño:" textFill="#e4d9d9" />
+        <Label id="lblSize" fx:id="lblSizeMostrar" layoutX="606.0" layoutY="94.0" prefHeight="20.9609375" prefWidth="63.000022070315026" text="" />
+        <Label id="lblAgregar" fx:id="lblBuscar" layoutX="21.0" layoutY="162.0" prefHeight="33.0" prefWidth="152.0" text="Buscar número en Cola" textFill="#f5eded" />
+        <TextField fx:id="txtBuscar" layoutX="21.0" layoutY="195.0" prefHeight="22.9609375" prefWidth="138.0" />
+        <Button fx:id="btnBuscar" layoutX="21.0" layoutY="228.0" mnemonicParsing="false" text="Buscar" />
+        <Label id="lblExtraer" fx:id="lblVaciar" layoutX="317.0" layoutY="141.0" prefHeight="20.9609375" prefWidth="63.000022070315026" text="Vaciar Cola" textFill="$x1" />
+        <Button id="btnExtraer" fx:id="btnVaciar" layoutX="322.0" layoutY="174.0" mnemonicParsing="false" text="Vaciar" />
+      </children>
+    </Pane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints />
+  </rowConstraints>
+</GridPane>
