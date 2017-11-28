@@ -43,7 +43,7 @@ public class Cola {
         return size;
     }
 
-    public int extraer(){
+    public int extraer(String text){
         if(frente == null){
             return 0;
         }
