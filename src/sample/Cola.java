@@ -4,13 +4,24 @@ package sample;
  * Created by juam_ on 22/11/2017.
  */
 public class Cola {
-    private Nodo frente;
-    private int size;
+
     int posicion = 0;
 
-    public Cola(){
-        this.frente = null;
+    {
+        //Metodo ver el tamaño
     }
+        private Nodo frente;
+        private int tamaño;
+
+
+    public boolean vacia(){return frente==null;}
+    public int getTamaño(){ return tamaño;}
+
+    public Cola() {
+        frente= null;
+        tamaño = 0;
+    }
+
 
     public void insertar(int valor){
         Nodo nuevo = new Nodo(valor);
@@ -23,7 +34,7 @@ public class Cola {
             }
             temp.setProximo(nuevo);
         }
-        size++;
+        tamaño++;
     }
 
     public void mostrar(){
@@ -40,9 +51,18 @@ public class Cola {
         }
     }
 
-    public int getSize(){
-        return size;
+    //Metodo para vaciar
+    public String vaciarLista(){
+        if(!vacia()){
+            frente=null;
+            tamaño=0;
+            return "La cola ah sido vaciada";
+        }else{
+
+            return "La cola no tiene valores";
+        }
     }
+
 
     public int extraer(){
         if(frente == null){
@@ -52,7 +72,7 @@ public class Cola {
             int valorExtraer = frente.getValor();
             frente  = frente.getProximo();
             System.out.println("Valor extraiído:  " + valorExtraer);
-            size--;
+            tamaño--;
             return valorExtraer;
         }
     }
