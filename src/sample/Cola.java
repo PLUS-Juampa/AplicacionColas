@@ -64,7 +64,7 @@ public class Cola {
     }
 
 
-    public int extraer(){
+    public int extraer(String text){
         if(frente == null){
             return 0;
         }
