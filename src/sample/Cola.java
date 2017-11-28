@@ -6,6 +6,7 @@ package sample;
 public class Cola {
     private Nodo frente;
     private int size;
+    int posicion = 0;
 
     public Cola(){
         this.frente = null;
@@ -55,5 +56,27 @@ public class Cola {
             return valorExtraer;
         }
     }
+
+    public int buscar(int busqueda){
+        try {
+            Nodo temp = frente;
+            if(temp.getValor() == busqueda) {
+                return 0;
+            }else{
+                while(temp != null){
+                    if (temp.getProximo().getValor()== busqueda){
+                        return posicion++;
+                    }
+                    temp = temp.getProximo();
+                    posicion ++;
+                }
+            }
+            return posicion;
+        }finally {
+            System.out.println("¡Número o valor no encontrado!");
+        }
+
+    }
+
 
 }

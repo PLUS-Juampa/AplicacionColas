@@ -58,5 +58,13 @@ public class Controller implements Initializable{
             }
         });
 
+        this.btnBuscar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                txtBuscar.setText("El número "+btnBuscar.getText()+"\n  encontrado en la \n posición "+cola.buscar(Integer.parseInt(txtBuscar.getText())));
+
+            }
+        });
+
     }
 }
