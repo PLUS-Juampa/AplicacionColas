@@ -4,12 +4,19 @@ package sample;
  * Created by juam_ on 22/11/2017.
  */
 public class Cola {
-    private Nodo frente;
-    private int size;
-
-    public Cola(){
-        this.frente = null;
+    {
+        //Metodo ver el tamaño
     }
+        private Nodo frente;
+        private int tamaño;
+    public boolean vacia(){return frente==null;}
+    public int getTamaño(){ return tamaño;}
+
+    public Cola() {
+        frente= null;
+        tamaño = 0;
+    }
+
 
     public void insertar(int valor){
         Nodo nuevo = new Nodo(valor);
@@ -38,6 +45,19 @@ public class Cola {
             System.out.println("\n\tLa cola está vacía.\n");
         }
     }
+
+    //Metodo para vaciar
+    public String vaciarLista(){
+        if(!vacia()){
+            frente=null;
+            tamaño=0;
+            return "La cola ah sido vaciada";
+        }else{
+
+            return "La cola no tiene valores";
+        }
+    }
+
 
     public int getSize(){
         return size;
