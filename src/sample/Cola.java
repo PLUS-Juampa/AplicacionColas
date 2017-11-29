@@ -1,12 +1,5 @@
 package sample;
 
-import javafx.scene.control.Alert;
-
-import javax.swing.*;
-
-/**
- * Created by juam_ on 22/11/2017.
- */
 public class Cola {
     int posicion = 0;   // Variable para mostrar posición de número
     private Nodo frente;    // Intancia de clase Nodo

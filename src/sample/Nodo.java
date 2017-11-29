@@ -1,8 +1,5 @@
 package sample;
 
-/**
- * Created by juam_ on 22/11/2017.
- */
 public class Nodo {
     private int valor;
     private Nodo proximo;
